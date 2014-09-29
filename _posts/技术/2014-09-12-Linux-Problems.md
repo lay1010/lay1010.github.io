@@ -52,4 +52,11 @@ RSA key fingerprint is 3a:17:4b:6e:62:e6:94:df:09:78:99:90:51:68:18:62.
 Are you sure you want to continue connecting (yes/no)?    #输入yes
 ```
 
+##3. tar.gz 文件解压
+- 打开终端
+- 进入需要解压的xxxx.tar.gz文件所在目录
+- $ tar xvfz xxxx.tar.gz
+
+
+
 
