@@ -50,7 +50,7 @@ body, html {
 }
 
 .avatar {
-  width: 80px;
+  width: 40px;
   /*height: 90px;*/
   border: 0px solid #fff;
 }
@@ -93,8 +93,8 @@ body, html {
   color: #303030;
 }
 .aside3-content {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
   color: #656565;
 }
 #content {
