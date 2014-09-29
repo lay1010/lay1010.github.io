@@ -81,6 +81,7 @@ body, html {
   height: 100%;
   overflow-y: auto;
   background-color: #fff;
+   overflow-x: hidden;
   /*background-image: url(/public/img/bg_lines1.jpg);*/
 }
 .aside3-title {

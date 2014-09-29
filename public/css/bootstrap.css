@@ -5331,7 +5331,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     margin-bottom: -1px;
     color: #fff;
     background-color: #1abc9c;
-    border: 1px solid #1abc9c;/*115449;*/
+    border: 0px solid #1abc9c;/*115449;*/
     border-left: 0px;
     border-right: 0px;
     /*border: 0px solid #ddd;*/
