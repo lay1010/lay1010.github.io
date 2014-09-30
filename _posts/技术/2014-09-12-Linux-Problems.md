@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linux学习：实际问题
+title: Linux 0：实际问题
 category: 技术
 tags: Linux
 keywords: 
