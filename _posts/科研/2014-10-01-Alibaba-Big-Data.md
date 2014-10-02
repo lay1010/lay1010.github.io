@@ -7,13 +7,9 @@ keywords: 大数据，机器学习，推荐系统
 description: 
 ---
 
-今年2月的某天，苏宇师兄问我对[阿里巴巴大数据竞赛](http://102.alibaba.com/competition/addDiscovery/index.htm)感兴趣吗，那时我学完[陈恩红](http://staff.ustc.edu.cn/~cheneh/)老师的《机器学习与数据挖掘》课程没多久，很好奇课程内容在实际中的应用。身为淘宝用户，也好奇我是如何被推荐的，学以致用嘛，于是就答应了和师兄一起参加比赛。正好那会儿认识了计算机学院的[刘惠民](http://painterliu.com)同学（FYI：他的个人博客风格设计是抄袭我的-。-），很快我们就组成了三人行团队，为团队起名`Rosemary`。
+8个月前，苏宇师兄问我对[阿里巴巴大数据竞赛](http://102.alibaba.com/competition/addDiscovery/index.htm)感兴趣吗。正好我选修了[陈恩红](http://staff.ustc.edu.cn/~cheneh/)老师的《机器学习与数据挖掘》，很好奇这门课在实际中的应用；身为淘宝用户，也好奇我是如何被推荐的。于是和师兄一起参加比赛，加上计算机学院的刘惠民同学，我们组成了名叫`Rosemary`三人团队。这次大赛总共有7276支队伍参赛，我们止步于第二赛季。第一赛季排名56；第二赛季排名68。
 
-###赛题介绍
-本赛题适用于season1 和season 2的比赛，season 3 为线上赛（season 2 赛后公布题目）。 
-在天猫，每天都会有数千万的用户通过品牌发现自己喜欢的商品，品牌是联接消费者与商品最重要的纽带。本届赛题的任务就是根据用户4个月在天猫的行为日志，建立用户的品牌偏好，并预测他们在将来一个月内对品牌下商品的购买行为。
-
-开放数据如下：
+###开放数据
 
 <table  class="table table-bordered table-striped table-condensed">
    <tr>
@@ -42,34 +38,30 @@ description:
       <td>抽样、字段加密</td>
    </tr>
 </table>
-用户对任意商品的行为都会映射为一行数据。其中所有商品ID都已汇总为商品对应的品牌ID。用户和品牌都分别做了一定程度的数据抽样，且数字ID都做了加密。所有行为的时间都精确到天级别(隐藏年份)。
+###比赛任务
+根据用户4个月在天猫的行为日志，建立用户的品牌偏好，并预测他们在将来一个月内对品牌下商品的购买行为。
 
 ###评估指标
-希望参赛队的预测, 预测的品牌准确率越高越好，也希望覆盖的用户和品牌越多越好，所以用最常用的准确率与召回率作为排行榜的指标。
+大赛最终的比赛成绩排名以F1得分为准。
 
-准确率：<img src="http://chart.googleapis.com/chart?cht=tx&chl=Precision%3D%5Cfrac%7B%5Csum_i%5EN%20hitBrands_i%7D%7B%5Csum_i%5EN%20pBrands_i%7D" style="border:none;" />
+准确率：<img src="http://latex.codecogs.com/gif.latex?Precision=\frac{\sum_i^N&space;hitBrands_i}{\sum_i^N&space;pBrands_i}" title="Precision=\frac{\sum_i^N hitBrands_i}{\sum_i^N pBrands_i}" />
 
-注： 
+召回率：<img src="http://latex.codecogs.com/gif.latex?Recall=\frac{\sum_i^M&space;hitBrands_i}{\sum_i^M&space;bBrands_i}" title="Recall=\frac{\sum_i^M hitBrands_i}{\sum_i^M bBrands_i}" />
 
-- N 为参赛队预测的用户数 
-- pBrandsi为对用户i 预测他(她)会购买的品牌列表个数 
+F1-Score：<img src="http://latex.codecogs.com/gif.latex?F_1=\frac{2\times&space;P\times&space;R}{P&plus;R}" title="F_1=\frac{2\times P\times R}{P+R}" />
+
+其中，
+
+- N 为参赛队预测的用户数；M 为实际产生成交的用户数量  
+- pBrandsi为对用户i 预测他(她)会购买的品牌列表个数；bBrandsi为用户i 真实购买的品牌个数 
 - hitBrandsi对用户i预测的品牌列表与用户i真实购买的品牌交集的个数
 
-召回率：<img src="http://chart.googleapis.com/chart?cht=tx&chl=Recall%3D%5Cfrac%7B%5Csum_i%5EM%20hitBrands_i%7D%7B%5Csum_i%5EM%20bBrands_i%7D" style="border:none;" />
+###解读`准确率`、`召回率`和`F1-Score`
+准确率就是正确预测数目比上预测总数目。召回率就是正确预测数目比上真实总数目。F1-Score是准确率和召回率的调和平均。理论上，准确率与召回率并没有必然的联系；但在实际中，这二者往往此消彼长、相互制约。有研究表明，在不牺牲准确率的情况下，获得一个高召回率是很难的。在赛题环境下举个栗子：
 
-注：
+假设我们预测出有
 
-- M 为实际产生成交的用户数量 
-- bBrandsi为用户i 真实购买的品牌个数 
-- hitBrandsi预测的品牌列表与用户i真实购买的品牌交集的个数
 
-最后用F1-Score 来拟合准确率与召回率，并且大赛最终的比赛成绩排名以F1得分为准。
-
-F1-Score：<img src="http://chart.googleapis.com/chart?cht=tx&chl=F_1%3D%5Cfrac%7B2PR%7D%7BP%2BR%7D" style="border:none;" />
-
-好了，比赛信息大致如上。简单说就是天猫给我们数据，我们需要在有限的数据中学习出所需要的东西，这里就是根据天猫用户在过去4个月的行为记录去预测下1个月他们的购买行为与购买品牌。
-
-###拿到题目后的分析
 
 （好困，需要去睡觉Zzz···）未完待续
 
@@ -77,11 +69,6 @@ F1-Score：<img src="http://chart.googleapis.com/chart?cht=tx&chl=F_1%3D%5Cfrac%
 
 ###第二赛季
 
-###成绩排名
-
-第一赛季排名：56/all7276;（没有截图）
-
-第二赛季排名：68/top500.（截图纪念）
 
 ![1](/public/img/score0.png)
 
