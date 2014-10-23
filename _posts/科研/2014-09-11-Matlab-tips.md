@@ -48,6 +48,7 @@ end
 ### SaveAs
 若需要比较各参数对算法性能的影响，通常是在程序中修改参数运行，得到算法收敛精度与迭代次数的曲线图。再根据曲线图反向思考修改哪些参数有效。这个过程需要保存产生的大量图片。可以使用`hold on`命令将所有虚线画在同一张图上，也可以使用`saveas`将所有图片自动保存。
 
+
 ```matlab
 %% plot
 figure(1)
@@ -60,6 +61,13 @@ hold on
 saveas(gcf,'filename','fig')           %filename：将图片保存为这个名字。fig：保存为fig格式
 ```
 
+保存变量数据的命令：
+
+```
+save('filename')
+save('filename','variables')
+```
+
 注意，在使用`hold on`命令时，应该保留上次程序运行后产生的各种数据。即不能在程序中写类似与`clear all`之类的清除语句，否则上次曲线图也将被删除。
 
 ### 矩阵规范化
@@ -69,5 +77,15 @@ saveas(gcf,'filename','fig')           %filename：将图片保存为这个名�
 [u s v]=svd(A);
 A=u*v';
 ```
+
+### 安装CVX
+
+1. 将cvx压缩包解压
+2. 将cvx文件夹拷贝至如D:\MATLAB Programs\Compressed Sensing目录下
+3. 在Current Folder窗口中打开cvx文件夹
+4. 在Command Window中输入cvx_setup
+5. 在MATLAB的File菜单下的set path把此路径加上。
+6. 把路径加进去后在file→Preferences→General的Toolbox Path Caching里点击update Toolbox Path Cache更新一下
+7. 完成
 
 
