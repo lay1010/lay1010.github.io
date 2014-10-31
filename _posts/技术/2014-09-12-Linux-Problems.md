@@ -26,7 +26,7 @@ description:
 ##2. ssh登陆失败
 以root身份远程登陆服务器，密码正确，却显示如下警告：
 
-```
+```bash
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -44,7 +44,7 @@ Host key verification failed.
 
 解决方法：
 
-```
+```bash
 vi ~/.ssh/known_hosts     #选中最后一条登陆记录，双击`d`删除，按“：”进入末行编辑模式，输入“x”，回车
 ssh root@222.195.93.129   #再次登陆
 The authenticity of host '222.195.93.129 (222.195.93.129)' can't be established.
