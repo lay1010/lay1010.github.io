@@ -2,7 +2,7 @@
 layout: post
 title: 阿里巴巴大数据竞赛回顾与总结
 category: 科研
-tags: 大数据 机器学习
+tags: MachineLearning
 keywords: 大数据，机器学习，推荐系统
 description: 
 ---

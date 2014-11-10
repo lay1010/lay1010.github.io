@@ -2,7 +2,7 @@
 layout: post
 title: 动态一致平均问题算法-EXTRA和DAC
 category: 科研
-tags: 矩阵补全
+tags: Optimization
 keywords: 矩阵补全，一致平均，论文
 description: 
 ---

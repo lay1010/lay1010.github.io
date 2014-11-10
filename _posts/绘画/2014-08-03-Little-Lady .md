@@ -2,7 +2,7 @@
 layout: post
 title: 小礼物Little Lady
 category: 绘画
-tags: 绘画
+tags: 
 keywords: 
 description: 
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Markdown输入LaTeX数学公式
 category: 技术
-tags: Markdown LaTeX
+tags: LaTeX
 keywords: 
 description: 
 ---

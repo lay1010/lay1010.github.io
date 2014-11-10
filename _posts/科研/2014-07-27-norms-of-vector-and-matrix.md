@@ -2,7 +2,7 @@
 layout: post
 title: 各类范数
 category: 科研
-tags: 范数
+tags: Math
 keywords: 向量范数，矩阵范数
 description: 
 ---

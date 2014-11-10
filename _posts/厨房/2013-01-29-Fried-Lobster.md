@@ -2,7 +2,7 @@
 layout: post
 title: 油爆虾
 category: 厨房
-tags: 虾
+tags: 
 keywords: 
 description: 
 ---

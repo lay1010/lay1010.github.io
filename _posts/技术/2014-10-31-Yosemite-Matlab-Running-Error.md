@@ -2,7 +2,7 @@
 layout: post
 title: Yosemite OS X 10.10 Matlab 2012a停止工作的解决办法 
 category: 技术
-tags: Mac
+tags: Mac Matlab
 keywords: 
 description: 
 ---

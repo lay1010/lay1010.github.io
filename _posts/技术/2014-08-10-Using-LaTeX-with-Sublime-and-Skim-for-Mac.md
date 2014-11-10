@@ -2,7 +2,7 @@
 layout: post
 title: 在Mac上通过Sublime、Skim编辑LaTeX
 category: 技术
-tags: LaTeX Sublime Skim Mac
+tags: LaTeX Mac
 keywords: 
 description: 
 ---

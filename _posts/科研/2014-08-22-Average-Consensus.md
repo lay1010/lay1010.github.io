@@ -2,7 +2,7 @@
 layout: post
 title: 对于一致平均问题的理解
 category: 科研
-tags: 矩阵补全
+tags: Optimization
 keywords: 矩阵补全，一致平均
 description: 
 ---
