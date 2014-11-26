@@ -98,10 +98,10 @@ body, html {
   padding-left: 40px;
   padding-right: 40px;
   color: #656565;
+  line-height: 1.42857143;
 }
 #content {
   font-size: 18px;
-  line-height: 1.8;
 }
 #content h2, h3 {
   line-height: 2;
