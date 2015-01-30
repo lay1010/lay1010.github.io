@@ -7,10 +7,6 @@ keywords:
 description: 
 ---
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 93ea9b424bc654365c3bd0c3712330bd5edfad8e
 ###1.1 在工作目录中创建新仓库
 进入新建的目录GitTest
 
@@ -64,7 +60,6 @@ $ git log
 
 ###1.10 远程仓库
 ```
-<<<<<<< HEAD
 $ git remote add TestGit https://github.com/lay1010/TestGit.git
 ```
 注意：按照官方教程，命令是`add origin`，而我之前已经误用过`origin`这个名字了，如果仍然git remote add origin，会出现fatal：remote origin already exists.
@@ -148,35 +143,14 @@ $ git push
 
 注意：完成所有步骤后发现blog里面所有的文件都消失了。原因我也不知道，看来看是得系统看书去。
 
-=======
-$ git remote add origin https://github.com/try-git/try_git.git
+###1.25 退回到之前1天的版本
 ```
-注意：这里出现fatal：remote origin already exists.我暂时没能解决。
-
-###1.11 远程推送
-```
-$ git push -u origin master
-```
-出现fatal：Repository not found.
-
-###1.12 远程拉入
-```
-$ git pull origin master
+$ git log --before="1 days"
 ```
 
-错误一直没能解决，先去看看progit再来更新。
->>>>>>> 93ea9b424bc654365c3bd0c3712330bd5edfad8e
 
 ###资料链接
 1. [Try Git](https://try.github.io/levels/1/challenges/1)
 
 
 
-
-
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 93ea9b424bc654365c3bd0c3712330bd5edfad8e
