@@ -85,13 +85,13 @@ F1-Score：<img src="http://latex.codecogs.com/gif.latex?F_1=\frac{2\times&space
 
 当然，在最初的模型建立起来之后，我们还陆续加了一些规则，比如在`时间节截止点`(最后N天，N可以根据自己的理解取值)的单独分析。另外，调参数真就是一项体力活。
 
-![1](/public/img/s1.jpg)
+![1](/public/img/posts/s1.jpg)
 
 ###第二赛季
 
 （好困，需要去睡觉Zzz···）细节未完待续
 
-![2](/public/img/score0.png)
+![2](/public/img/posts/score0.png)
 
 
 ###总结
