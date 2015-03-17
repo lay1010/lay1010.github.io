@@ -1,30 +1,25 @@
 ---
-layout: default
+layout: base
 ---
-<article class="post container">
-  <div class="post-meta">
-    <span class="post-meta-span date">{{ page.date | date:"%Y %B %d" }}</span>
-    {% if page.tags.size > 0 %}
-    <span class="post-meta-span tag">{{ page.tags | join: ', ' }}</span>
-    {% endif %}
+<div class="row">
+  <div class="col-md-13 aside3-title">
+    <br>
+    <h2 id="#identifier">{{ page.title }}</h2>
+    {{ page.date | date:"%Y年%m月%d日" }}
   </div>
-
-  <h1 class="post-title">{{ page.title }}</h1>
-  {{ content }}
-</article>
-
-<div class="post-share">
-  <div class="container">
-    <a href="https://twitter.com/share?url={{ page.url | prepend: site.baseurl | prepend: site.url }}&text={{ page.title }}" target="_blank" class="post-share-icon twitter"></a>
-    <a href="https://www.evernote.com/clip.action?url={{ page.url | prepend: site.baseurl | prepend: site.url }}&title={{ page.title }}" target="_blank" class="post-share-icon evernote"></a>
-    <a href="http://service.weibo.com/share/share.php?url={{ page.url | prepend: site.baseurl | prepend: site.url }}&title={{ page.title }}" target="_blank" class="post-share-icon weibo"></a>
+  <div class="col-md-13 aside3-content">
+    <hr>
+    <div id="content">
+      {{ content }}
+    </div>
+    <hr>
+    {% include disqus.html %}
   </div>
-</div>
-
-{% if site.disqus_shortname %}
-<div class="comment container">
-  <div id="disqus_thread">
-    <a href=""></a>
+  <!-- 目录 -->
+  <div id="content_table" style="position:fixed;right:20px;top:120px;display:none;">
+    <div class="panel panel-success">
+      <div class="panel-body" id="nav"></div>
+    </div>
   </div>
 </div>
-{% endif %}
+

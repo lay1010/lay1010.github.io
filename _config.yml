@@ -1,34 +1,47 @@
-# Site settings
-title: PainterLin
-email: lay.1010@hotmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://painterlin.com" # the base hostname & protocol for your site
+permalink: /:year/:month/:day/:title.html
+paginate: 10
+markdown: redcarpet
 
+# 作者信息
+author: 
+  name: Anya Lin
+  email: lay.1010@hotmail.com
+  link: http://painterlin.com
+  weibo: http://weibo.com/orangeissweet
+  github: http://github.com/lay1010
+  music: http://site.douban.com/linanya
+  linkedin: https://www.linkedin.com/pub/anya-lin/81/91/232
 
-# Sidebar filter
-# Choose 'tag' or 'category' as filter in sidebar.
-filter: 'tag'
+# 站点信息
+title: 林安亚的博客
+description: My personal blog
+url: http://painterlin.com
+rss_url: /pages/atom.xml
 
+# gavatar头像及Favicon
+gavatar: /public/img/deer3.png
+favicon: /public/img/deer3.png
 
-# Social account
-# twitter:  username
-# weibo:    ID
-# github:   username
-# codepen:  username
-# dribbble: username
+# google analytics 设置
+ga:
+  id: UA-54262064-1 
+  url: painterlin.com
 
+# disqus 设置
+disqus:
+  shortname: painterlin
 
-# Comment
-# disqus_shortname:
+# 主题设置，自动激活某个标签
+active: 读书
 
+# 首页除了最新文章外显示分类
+cates: 
+  - Optimization
+  - LaTeX
 
-# Build settings
-markdown: kramdown
-sass:
-  style: compressed
-gems:
-  - jekyll-sitemap
+# 中文本地化
+locals:
+  tags: 标签
+  about: 关于
+  newest: 最新文章
+  archive: 归档
