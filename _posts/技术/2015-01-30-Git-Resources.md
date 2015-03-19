@@ -1,152 +1,90 @@
 ---
 layout: post
-title: Git常用资源
+title: Git常用命令速查表
 category: 技术
 tags: Git
 keywords: 
 description: 
 ---
 
-###1.1 在工作目录中创建新仓库
-进入新建的目录GitTest
+master: 默认开发分支
+
+origin: 默认远程版本库
+
+Head: 默认开发分支
+
+Head^: Head的父提交
+
+###创建版本库
 
 ```
-$ git init
+$ git clone <url>   #克隆远程版本库
+$ git init          #初始化本地版本库
 ```
 
-###1.2 检查状态
+###修改和提交
 
 ```
-$ git status
+$ git status        #查看状态
+$ git diff          #查看变更内容
+$ git add .         #跟踪所有改动过的文件
+$ git add <file>    #跟踪指定的文件
+$ git mv <old><new> #文件改名
+$ git rm<file>      #删除文件
+$ git rm --cached<file>            #停止跟踪文件但不删除
+$ git commit -m "commit messages"  #提交所有更新过的文件
+$ git commit --amend               #修改最后一次改动
 ```
 
-###1.3 添加与提交
-在当前工作目录中创建文件，这里我新建了`ReadMe.md`
-
-###1.4 添加变化
+###查看提交历史
 
 ```
-$ git add ReadMe.md
+$ git log                    #查看提交历史
+$ git log -p <file>          #查看指定文件的提交历史
+$ git blame <file>           #以列表方式查看指定文件的提交历史
 ```
 
-###1.5 检查变化
+###撤销
 
 ```
-$ git status
+$ git reset --hard HEAD      #撤销工作目录中所有未提交文件的修改内容
+$ git checkout HEAD <file>   #撤销指定的未提交文件的修改内容
+$ git revert <commit>        #撤销指定的提交
+$ git log --before="1 days"  #退回到之前1天的版本 
 ```
 
-###1.6 提交
+###分支与标签
 
 ```
-$ git commit -m "Add ReadMe"
+$ git branch                   #显示所有本地分支
+$ git checkout <branch/tag>    #切换到指定分支和标签
+$ git branch <new-branch>      #创建新分支
+$ git branch -d <branch>       #删除本地分支
+$ git tag                      #列出所有本地标签
+$ git tag <tagname>            #基于最新提交创建标签
+$ git tag -d <tagname>         #删除标签
 ```
 
-###1.7 添加所有变化
-比如添加所有的`.md`文件
+###合并与衍合
 
 ```
-$ git add '*.md'
-```
-###1.8 提交所有变化
-
-```
-$ git commit -m 'Add all md files'
+$ git merge <branch>        #合并指定分支到当前分支
+$ git rebase <branch>       #衍合指定分支到当前分支
 ```
 
-###1.9 历史
+###远程操作
+
 ```
-$ git log
+$ git remote -v                   #查看远程版本库信息
+$ git remote show <remote>        #查看指定远程版本库信息
+$ git remote add <remote> <url>   #添加远程版本库
+$ git fetch <remote>              #从远程库获取代码
+$ git pull <remote> <branch>      #下载代码及快速合并
+$ git push <remote> <branch>      #上传代码及快速合并
+$ git push <remote> :<branch/tag-name>  #删除远程分支或标签
+$ git push --tags                       #上传所有标签
 ```
 
-###1.10 远程仓库
-```
-$ git remote add TestGit https://github.com/lay1010/TestGit.git
-```
-注意：按照官方教程，命令是`add origin`，而我之前已经误用过`origin`这个名字了，如果仍然git remote add origin，会出现fatal：remote origin already exists.
-
-解决办法：将origin更换为其他名字，比如我现在更换为TestGit，后面的命令也相应地把origin替换为TestGit。感谢一楼评论`小明 曹`童鞋。
-
-###1.11 远程推送
-```
-$ git push -u TestGit master
-```
-
-###1.12 远程拉入
-```
-$ git pull TestGit master
-```
-
-###1.13 区别
-```
-$ git diff HEAD
-```
-
-###1.14 阶段区别
-```
-$ git add testfamily/3.md
-$ git diff --staged
-```
-`3.md`是刚刚添加的文件。
-
-
-###1.15 重置阶段
-```
-$ git reset testfamily/3.md
-```
-移除3.md，注意这里只是将3.md从staged状态移除。
-
-###1.16 撤销
-```
-$ git checkout -- 2.md
-```
-注意：checkout的用法不是很懂，这儿得问问。
-
-###1.17 分支出去
-```
-$ git branch clean_up
-```
-创建一个名叫`clean_up`的分支。
-
-###1.18 切换分支
-```
-$ git checkout clean_up
-```
-从master切换到了clean_up
-
-###1.19 移除所有东西
-```
-$ git rm '*.md'
-```
-
-###1.20 提交分支变化
-```
-$ git commit -m "remove all things"
-```
-
-###1.21 切换回master分支
-```
-$ git checkout master
-```
-###1.22 准备合并分支
-```
-$ git merge clean_up
-```
-###1.23 保持简洁（删除分支）
-```
-$ git branch -d clean_up
-```
-###1.24 最终推送
-```
-$ git push
-```
-推送所有东西。
-
-注意：完成所有步骤后发现blog里面所有的文件都消失了。原因我也不知道，看来看是得系统看书去。
-
-###1.25 退回到之前1天的版本
-```
-$ git log --before="1 days"
-```
 
 
 ###资料链接
