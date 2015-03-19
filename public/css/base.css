@@ -95,10 +95,15 @@ body, html {
   color: #303030;
 }
 .aside3-content {
+<<<<<<< HEAD
 /*  padding-left: 40px;
   padding-right: 40px;
 */  
   padding: 0 5% 0 5%;
+=======
+  padding-left: 40px;
+  padding-right: 40px;
+>>>>>>> cc60f2ed32a5f9727a68a2eb7f2f6a8a1eeac51a
   color: #656565;
   line-height: 1.42857143;
 }
