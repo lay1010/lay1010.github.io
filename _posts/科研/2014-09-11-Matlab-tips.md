@@ -88,4 +88,9 @@ A=u*v';
 6. 把路径加进去后在file→Preferences→General的Toolbox Path Caching里点击update Toolbox Path Cache更新一下
 7. 完成
 
+### %%分段运行程序
+
+1. 选中%%分段
+2. 右键选择`evaluate current section`
+
 
