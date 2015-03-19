@@ -14,14 +14,14 @@ description:
 ### Clear
 运行一段代码前通常需要将工作空间里的已有数据清除掉。只需要在编辑有实际意义的代码之前写下如下代码：
 
-```matlab
+```
 clc; clear; close all;
 ```
 
 ### Random Seed 
 为了保证程序在相同环境下运行以便测试某一个或几个改变对于算法的影响，在使用各种random命令时，需要设定固定种子。这样就不会因为每次随机产生的序列不同而影响程序运行结果。设置随机种子的代码如下：
 
-```matlab
+```
 %% random seed
 %seed=round(5000*rand);       % use this line if you set a random seed
 seed=3302;    % use this line if you set a fixed seed. 3302 can be replaced by other numbers.
@@ -37,7 +37,7 @@ end
 ### NaN
 NaN是Not a Number的缩写。当某变量显示NaN时，表示该变量是不明确的数值结果。比如0/0、inf/inf等运算会出现NaN报错。遇到这种情况，首先判断NaN出现在哪一步：
 
-```matlab
+```
 if isnan(norres)    %括号里是变量名。判断norres是否为NaN，若是，则在该步暂停程序。
     keyboard;
 end
@@ -49,7 +49,7 @@ end
 若需要比较各参数对算法性能的影响，通常是在程序中修改参数运行，得到算法收敛精度与迭代次数的曲线图。再根据曲线图反向思考修改哪些参数有效。这个过程需要保存产生的大量图片。可以使用`hold on`命令将所有虚线画在同一张图上，也可以使用`saveas`将所有图片自动保存。
 
 
-```matlab
+```
 %% plot
 figure(1)
 semilogy(1:iter,y_axis(1:iter),'b-');  %b：蓝色。－：线段形状
@@ -73,7 +73,7 @@ save('filename','variables')
 ### 矩阵规范化
 已知满秩矩阵A，进行下面操作使其所有奇异值均为1。
 
-```matlab
+```
 [u s v]=svd(A);
 A=u*v';
 ```
@@ -87,5 +87,10 @@ A=u*v';
 5. 在MATLAB的File菜单下的set path把此路径加上。
 6. 把路径加进去后在file→Preferences→General的Toolbox Path Caching里点击update Toolbox Path Cache更新一下
 7. 完成
+
+### %%分段运行程序
+1. 选中%%分段
+2. 右键选择`evaluate current section`
+
 
 
