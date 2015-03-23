@@ -18,7 +18,10 @@ description:
 ###Proximal Gradient
 <a href="http://www.codecogs.com/eqnedit.php?latex=x^&plus;=prox_{\alpha&space;h}(x-\alpha&space;\nabla&space;g(x))=&space;\arg\min_u&space;h(u)&plus;\frac{1}{2\alpha}||u-x&plus;\alpha&space;\nabla&space;g(x)||" target="_blank"><img src="http://latex.codecogs.com/gif.latex?x^&plus;=prox_{\alpha&space;h}(x-\alpha&space;\nabla&space;g(x))=&space;\arg\min_u&space;h(u)&plus;\frac{1}{2\alpha}||u-x&plus;\alpha&space;\nabla&space;g(x)||" title="x^+=prox_{\alpha h}(x-\alpha \nabla g(x))= \arg\min_u h(u)+\frac{1}{2\alpha}||u-x+\alpha \nabla g(x)||" /></a>
 ###Conjugate Gradient
+是介于最速下降法和牛顿法之间的一个方法，它仅需要利用一阶导数信息，但克服了最速下降法收敛慢的缺点，又避免了牛顿法需要存储和计算Hession并求逆的缺点。它是解决大型线性方程组最有用的方法之一，也是解决大型非线性最优化最有效的算法之一。
 
 ###Newton
+见[牛顿法与拟牛顿法（DFP BFGS LBFGS VLBFGS）](http://painterlin.com/2015/03/23/Newton-QuasiNewton-Method.html)
 
 ###Quasi Newton
+见[牛顿法与拟牛顿法（DFP BFGS LBFGS VLBFGS）](http://painterlin.com/2015/03/23/Newton-QuasiNewton-Method.html)
