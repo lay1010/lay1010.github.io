@@ -4,18 +4,18 @@ markdown: redcarpet
 
 # 作者信息
 author: 
-  name: Anya Lin
-  email: lay.1010@hotmail.com
-  link: http://painterlin.com
-  weibo: http://weibo.com/orangeissweet
-  github: http://github.com/lay1010
-  music: http://site.douban.com/linanya
-  linkedin: https://www.linkedin.com/pub/anya-lin/81/91/232
+  name: Kelvin Liu
+  email: liuweigg@126.com
+  link: http://liuweigg.com
+  weibo: http://weibo.com/u/2142212707
+  github: http://github.com/liuweigg
+  music: 
+  linkedin: 
 
 # 站点信息
-title: 林安亚的博客
+title: 刘伟的博客
 description: My personal blog
-url: http://painterlin.com
+url: http://liuweigg.com
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
@@ -25,11 +25,11 @@ favicon: /public/img/deer3.png
 # google analytics 设置
 ga:
   id: UA-54262064-1 
-  url: painterlin.com
+  url: liuweigg.com
 
 # disqus 设置
 disqus:
-  shortname: painterlin
+  shortname: lw
 
 # 主题设置，自动激活某个标签
 active: 读书
