@@ -18,8 +18,8 @@ url: http://xuxintao.com
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
-gavatar: /public/img/flower.jpg
-favicon: /public/img/flower.jpg
+gavatar: /public/img/boat.jpg
+favicon: /public/img/boat.jpg
 
 # google analytics 设置
 ga:
