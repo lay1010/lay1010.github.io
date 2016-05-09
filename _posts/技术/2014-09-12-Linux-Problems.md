@@ -57,14 +57,13 @@ Are you sure you want to continue connecting (yes/no)?    #输入yes
 - 进入需要解压的xxxx.tar.gz文件所在目录
 - $ tar xvfz xxxx.tar.gz
 
-<<<<<<< HEAD
 ##4. 新建文件命令
 
 ```
 touch a.txt
 ```
 =======
->>>>>>> cc60f2ed32a5f9727a68a2eb7f2f6a8a1eeac51a
+
 
 
 
